@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1a1a1a;
+  background: #fafafa;
+  line-height: 1.7;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 80px 24px 48px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: #555;
+  margin-bottom: 48px;
+}
+
+/* Intro */
+
+.intro {
+  margin-bottom: 48px;
+}
+
+.intro p {
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+/* Pillars */
+
+section h2 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.pillars {
+  margin-bottom: 48px;
+}
+
+.pillar {
+  margin-bottom: 28px;
+}
+
+.pillar h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.pillar p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Approach */
+
+.approach {
+  margin-bottom: 48px;
+}
+
+.principles {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.principle {
+  background: #fff;
+  padding: 20px 24px;
+}
+
+.principle h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.principle p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Infrastructure link */
+
+.infrastructure {
+  margin-bottom: 48px;
+}
+
+.infrastructure p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.infrastructure a {
+  color: #555;
+  text-decoration: underline;
+}
+
+.infrastructure a:hover {
+  color: #1a1a1a;
+}
+
+/* Footer */
+
+footer {
+  margin-top: auto;
+  padding-top: 32px;
+}
+
+footer p {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+footer a {
+  color: #888;
+}
+
+footer a:hover {
+  color: #1a1a1a;
+}
+
+footer .contact {
+  margin-top: 4px;
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 48px 20px 32px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+}
