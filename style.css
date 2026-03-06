@@ -5,159 +5,96 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
   color: #1a1a1a;
   background: #fafafa;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 main {
   max-width: 640px;
   margin: 0 auto;
-  padding: 80px 24px 48px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  padding: 80px 24px;
 }
 
 h1 {
   font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 8px;
-}
-
-.subtitle {
-  font-size: 1.15rem;
-  color: #555;
-  margin-bottom: 48px;
-}
-
-/* Intro */
-
-.intro {
-  margin-bottom: 48px;
-}
-
-.intro p {
-  margin-bottom: 16px;
-  font-size: 1.05rem;
-  color: #333;
-}
-
-/* Pillars */
-
-section h2 {
-  font-size: 0.8rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #888;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
-.pillars {
+.vision {
   margin-bottom: 48px;
 }
 
-.pillar {
-  margin-bottom: 28px;
+.vision > p:first-child {
+  font-size: 1.25rem;
+  color: #444;
+  font-style: italic;
+  margin-bottom: 12px;
 }
 
-.pillar h3 {
+.vision ul {
+  list-style: none;
+  margin-bottom: 16px;
+  padding-left: 8px;
+}
+
+.vision li {
+  color: #333;
+  padding: 3px 0;
+  line-height: 1.7;
+}
+
+.vision li::before {
+  content: "\2009";
+}
+
+.vision .coda {
+  font-size: 1.05rem;
+  color: #555;
+  margin-top: 16px;
+  font-weight: 500;
+}
+
+h2 {
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+  margin-bottom: 16px;
 }
 
-.pillar p {
-  font-size: 0.95rem;
-  color: #444;
-}
-
-/* Approach */
-
-.approach {
+.products ul {
+  list-style: none;
   margin-bottom: 48px;
 }
 
-.principles {
+.products li {
   display: flex;
-  flex-direction: column;
-  gap: 1px;
-  background: #e8e8e8;
-  border: 1px solid #e8e8e8;
-  border-radius: 10px;
-  overflow: hidden;
+  align-items: baseline;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
 }
 
-.principle {
-  background: #fff;
-  padding: 20px 24px;
+.products a {
+  font-weight: 500;
+  color: #1a1a1a;
+  text-decoration: none;
 }
 
-.principle h3 {
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-
-.principle p {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* Infrastructure link */
-
-.infrastructure {
-  margin-bottom: 48px;
-}
-
-.infrastructure p {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.infrastructure a {
-  color: #555;
+.products a:hover {
   text-decoration: underline;
 }
 
-.infrastructure a:hover {
-  color: #1a1a1a;
-}
-
-/* Footer */
-
-footer {
-  margin-top: auto;
-  padding-top: 32px;
-}
-
-footer p {
-  font-size: 0.85rem;
+.products span {
   color: #888;
+  font-size: 0.875rem;
 }
 
-footer a {
-  color: #888;
-}
-
-footer a:hover {
+.contact a {
   color: #1a1a1a;
-}
-
-footer .contact {
-  margin-top: 4px;
-}
-
-@media (max-width: 480px) {
-  main {
-    padding: 48px 20px 32px;
-  }
-
-  h1 {
-    font-size: 1.75rem;
-  }
 }
