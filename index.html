@@ -8,10 +8,8 @@
 </head>
 <body>
   <main>
-    <h1>A Better World Project</h1>
-
     <section class="vision">
-      <p>In a better world...</p>
+      <p class="prompt">In a better world...</p>
       <ul>
         <li>your data is yours</li>
         <li>your attention is protected as a finite and precious resource</li>
@@ -25,37 +23,62 @@
         <li>you have the power to shape your own path</li>
         <li>possibilities abound</li>
       </ul>
-      <p class="coda">We build open tools to help get there.</p>
+      <p class="coda">
+        We build <a href="https://abwp.ai">open tools</a>
+        to help get there.
+      </p>
     </section>
 
-    <section class="products">
-      <h2>Products</h2>
-      <ul>
-        <li>
-          <a href="https://cubby.abwp.ai">Cubby</a>
-          <span>Community knowledge assistant</span>
-        </li>
-        <li>
-          <a href="https://geeni.abwp.ai">Geeni</a>
-          <span>Earth Engine expert agent</span>
-        </li>
-        <li>
-          <a href="https://yohumps.abwp.ai">YoHumps</a>
-          <span>Talk to your representative</span>
-        </li>
-        <li>
-          <a href="https://demo.sil.abwp.ai">Sil</a>
-          <span>Personal AI assistant</span>
-        </li>
-      </ul>
+    <section class="imagine">
+      <label for="dream">What does yours look like?</label>
+      <textarea id="dream" rows="3"
+        placeholder="Imagine a better world..."></textarea>
+      <button id="send" type="button">Share</button>
+      <p class="note">Anonymous. No account needed.</p>
+      <p id="thanks" class="thanks" hidden>Thank you.</p>
     </section>
 
-    <section class="contact">
-      <h2>Contact</h2>
+    <footer>
       <p>
         <a href="mailto:hello@abwp.ai">hello@abwp.ai</a>
       </p>
-    </section>
+      <p class="org">A Better World Project &middot; 501(c)(3)</p>
+    </footer>
   </main>
+
+  <script>
+  (function() {
+    var btn = document.getElementById('send');
+    var ta = document.getElementById('dream');
+    var thanks = document.getElementById('thanks');
+    var sent = false;
+
+    btn.addEventListener('click', function() {
+      var text = ta.value.trim();
+      if (!text || sent) return;
+      if (text.length > 2000) {
+        ta.value = text.slice(0, 2000);
+        return;
+      }
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      fetch('https://dreams.abwp.ai/submit', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json',
+                  'Accept': 'application/json'},
+        body: JSON.stringify({dream: text})
+      }).then(function() {
+        sent = true;
+        thanks.hidden = false;
+        btn.textContent = 'Shared';
+        ta.disabled = true;
+      }).catch(function() {
+        btn.disabled = false;
+        btn.textContent = 'Share';
+      });
+    });
+  })();
+  </script>
 </body>
 </html>
